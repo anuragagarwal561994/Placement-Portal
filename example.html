@@ -12,98 +12,89 @@
         * {
             box-sizing: border-box;
         }
-        body{
-            background-color:#fafafa;
+
+        #main2 {
+            padding: 100px;
+            color: white;
+            background-color: #FF3B49;
         }
-        #super-main{
+
+        #div2 {
+            padding-right: 100px;
+            padding-top: 100px;
+        }
+
+        #d1m {
+            padding-left: 100px;
+            padding-top: 100px;
+        }
+
+        #form1 {
             background-color: white;
-            margin:200px 200px 200px 200px;
+            padding: 50px 70px 120px;
         }
-        #div1{
-            float:left;
-            background-color:white;
-        }
-        #div2{
-            float:left;
-        }
-        #main2{
-            padding:100px;
-            color:white;
-            background-color:rgba(240, 56, 56, 0.99);
-            
-        }
-        #div2{
-            padding:60px;
-        }
-        #d1m{
-            padding:80px;
-        }
-        #d2m{
-            text-align:center;
-            padding:30px;
-        }
-        #form1{
-            background-color:white;
-            padding:80px;
-        }
-        @media only screen and (max-width: 1300px) {
-            #super-main{
-                margin:0px 0px 0px 0px;
-            }
-            div{
-                width:100%;
-            }
-            #form1{
-                padding:10px;
-            }
-            #d1m{
-                padding:40px;
-            }
+
+        #form1 input, #form1 textarea {
+            border: 1px solid #FF3B49;
+            padding-left: 15px;
+            margin-left: -7.5px;
+            margin-bottom: 25px;
         }
     </style>
 </head>
 <body>
-    
-    <div class="z-depth-1 col l12" id="super-main" >
-        <section id="main1" style="max-height:450px;">
-            <div class="row">
-                <div class="container-fluid col s12 m12 l6" id="div1" >
-                    <div id="d1m">
+
+<div class="z-depth-1 col l12">
+    <section style="max-height:450px;">
+        <div class="row">
+            <div class="container-fluid col s12 m12 l6">
+                <div id="d1m">
                     <div class="col s12 m12">
-                        <p style="font-size:130%;"><b>GET IN TOUCH</b><p>
-                        <p style="margin-right:80px;font-size:110%;">Here is our contact information.You can contact us from Emaill,Phone No. or Postal Adress.You can all contact from faceook.Facebook information is given below.</p><br><br>
-                    </div>
-                    <div class="col s12 m12">
-                    <i class="material-icons" style="color:red;">email</i><span style="margin-left:30px;font-size:115%;"><b>daiict@daiict.ac.in</b></span><br>
-                    <i class="material-icons" style="color:red;">stay_current_portrait</i><span style="margin-left:30px;font-size:115%;"><b>079-27910898</b></span><br>
-                    <i class="material-icons" style="color:red;">room</i><span style="margin-left:30px;font-size:115%;"><b>Gandhinagar,Gujarat,India.</b></span> 
-                    </div>
+                        <p style="font-size: 1.3em;">
+                            <b>GET IN TOUCH</b>
+                        <p>
+                        <p style="font-size: 1.1em;">
+                            Here is our contact information.You can contact us
+                            from Emaill,Phone No. or Postal Adress.You can all contact from faceook.Facebook information
+                            is given below.
+                        </p>
+                        <br>
+                        <i class="material-icons" style="color: #FF3B49;">email</i>
+                        <span style="margin-left:30px;font-size:1.15em;"><b>daiict@daiict.ac.in</b></span>
+                        <br><br>
+                        <i class="material-icons" style="color:#FF3B49;">stay_current_portrait</i>
+                        <span style="margin-left:30px;font-size:1.15em;"><b>079-27910898</b></span>
+                        <br><br>
+                        <i class="material-icons" style="color:#FF3B49;">room</i>
+                        <span style="margin-left:30px;font-size:1.15em;"><b>Gandhinagar,Gujarat,India.</b></span>
                     </div>
                 </div>
-                <div class="container-fluid col s12 m12 l6 center-align" id="div2">
-                    <div class="z-depth-2" id="form1">
+            </div>
+            <div class="container-fluid col s12 m12 l6" id="div2">
+                <div class="z-depth-2" id="form1">
                     <div>
-                    <h4 class="left-align">SAY SOMETHING</h4>
+                        <p style="font-size: 1.5em; margin-left: -7.5px; margin-bottom: 25px"><b>SAY SOMETHING</b>
                     </div>
-                    <div class="row">
                     <form>
                         <input type="text" id="name" placeholder="Your Name..">
-                        <input type="text" id="name" placeholder="Your Email..">
-                        <textarea id="message" placeholder="Your Message..." class="materialize-textarea"></textarea>
-                        <button class="btn waves-effect waves-light red lighten-1 col l12 z-depth-1" type="submit" name="action">Send</button>
+                        <input type="text" id="email" placeholder="Your Email..">
+                            <textarea id="message" placeholder="Your Message..."
+                                      class="materialize-textarea"></textarea>
+                        <button class="btn waves-effect waves-light red accent-2 col l12 z-depth-2" type="submit"
+                                name="action" style="padding: 0 10px;">Send
+                        </button>
                     </form>
-                    </div>
                 </div>
-                </div>
-                </div>
-        </section>
-        <section id="main2">
-            <div class="row" id="row2">
-            <div class="container-fluid col l4" id="footer1">
+            </div>
+        </div>
+    </section>
+    <section id="main2">
+        <div class="row" id="row2">
+            <div class="container-fluid col l4">
                 <h4>DA-IICT</h4>
                 <p>Dhirubhai Ambani Institute of Informaton and Communication Technology,Gandhinagar,Gujarat,India.</p>
             </div>
-            <div class="container-fluid col l4" id="footer1">
+            <div class="container-fluid col l4">
                 <h4>About Us</h4>
                 <p>Dhirubhai Ambani Institute of Informaton and Communication Technology,Gandhinagar,Gujarat,India.</p>
             </div>
@@ -113,17 +104,17 @@
                 <a href="#" style="color:white;margin:40px;"><i class="fa fa-facebook" style="font-size:36px;"></i></a>
             </div>
         </div>
-            <br>
-            <div class="row">
+        <br>
+        <div class="row">
             <ul class="footerul hide-on-med-and-down">
-            <li class="col l2"><a style="color:white;" href="#">Link 1</a></li>
-            <li class="col l2"><a style="color:white;" href="#">Link 2</a></li>
-            <li class="col l2"><a style="color:white;" href="#">Link 3</a></li> 
-            <li class="col l2"><a style="color:white;" href="#">Link 4</a></li> 
-            <li class="col l2"><a style="color:white;" href="#">Link 5</a></li> 
-            <li class="col l2"><a style="color:white;" href="#">Link 6</a></li>
-        </ul>
+                <li class="col l2"><a style="color:white;" href="#">Link 1</a></li>
+                <li class="col l2"><a style="color:white;" href="#">Link 2</a></li>
+                <li class="col l2"><a style="color:white;" href="#">Link 3</a></li>
+                <li class="col l2"><a style="color:white;" href="#">Link 4</a></li>
+                <li class="col l2"><a style="color:white;" href="#">Link 5</a></li>
+                <li class="col l2"><a style="color:white;" href="#">Link 6</a></li>
+            </ul>
         </div>
-        </section>
-    </div>
+    </section>
+</div>
 </body>
