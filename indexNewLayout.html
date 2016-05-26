@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+        <title>Contact Us</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+        <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+        <script src="http://maps.googleapis.com/maps/api/js"></script>
+        <style>
+            body{
+                margin:100px;
+            }
+            .map-responsive{
+                overflow: visible;
+                padding-bottom:56.25%;
+                position:relative;
+                height:0;
+            }
+            .map-responsive iframe{
+                left:0;
+                top:0;
+                height:162%;
+                width:65%;
+                position:absolute;
+            }
+            #mapiframe{
+                margin-left:75px;
+            }
+            #reach{
+                padding:60px 80px 60px 80px;
+                
+            }
+            #map{
+                margin-right:-60px;
+            }
+            i{
+                color:#42a5f5;
+            }
+            #formheader{
+                color:#42a5f5;
+            }
+            #form{
+                margin:55px;
+                padding:30px;
+            }
+            #footer{
+                margin:55px;
+                padding:30px;
+            }
+            li{
+                color:black;
+                font-size:1.5em;
+                margin-left: 70px;
+                padding: 10px;
+            }
+            @media only screen and (max-width: 1200px){
+            body {
+				margin:20px;
+			}   
+            .map-responsive{
+                overflow: hidden;
+                padding-bottom:56.25%;
+                position:relative;
+                height:0;
+            }
+			.map-responsive iframe{
+                left:0;
+                top:0;
+                height:100%;
+                width:100%;
+                position:absolute;
+            }
+            #mapiframe{
+                margin-left:10px;
+            }
+            #reach{
+                padding:15px;
+                
+            }
+            #map{
+                margin-right:0px;
+            }
+            #reach{
+                margin-top:10px;
+            }
+		  }
+        </style>
+    </head>
+    <body>
+        <div id="mapAndReach" class="row">
+            <div class="col s12 m12 l6"  id="map">
+                <div class="map-responsive" id="map">
+                    <iframe class="z-depth-1" id="mapiframe" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14669.99812823208!2d72.6284195!3d23.1884592!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x2cc22ec547e4caa1!2sDA-IICT!5e0!3m2!1sen!2sin!4v1464059611179" width="800" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>
+                </div>
+            </div>
+            <div id="reach" class="col s12 m12 l6 z-depth-1">
+                <h4 style="text-align:center;" id="reachHeader">How To Reach DA-IICT</h4>
+                <div>
+                    <i class="fa fa-train" aria-hidden="true" style="font-size:1.5em;"></i><span style="margin-left:10px;font-size:1.5em;">By Rail:</span><span style="margin-left:10px;font-size:1.3em;">Government buses, shuttling between Ahmedabad and Gandhinagar, run on a regular basis, and one of their various stops is just a stone's throw from the Ahmedabad railway station. Also, Gujaratis are very amiable people, and will direct you to the proper bus if asked. The stop at Gandhinagar where you need to disembark is Gh-0 or Ch-0, both of which are less than 1 Km from the DA-IICT campus. From here, autos could be easily hired to the campus. we will also be placed at these points to guide you. Taxi services consist of mostly Ambassador Cabs and taxis could be hired for a one-way trip to DA-IICT.</span><br><hr>
+                    <i class="fa fa-road" aria-hidden="true" style="font-size:1.5em;"></i><span style="margin-left:10px;font-size:1.5em;">By Road:</span><span style="margin-left:10px;font-size:1.3em;">Ahmedabad airport boasts of a good taxi service where cabs can be hired to take you to DA-IICT. Regular buses are also available at a short distance from the airport which would drop you off at either Gh-0 or Ch-0 from where you can hire an auto to take you to the college campus. Directions to the campus would be placed at strategic points as well as our help desk will be stationed at the airport.</span><br><hr>
+                    <i class="fa fa-plane" aria-hidden="true" style="font-size:1.5em;"></i><span style="margin-left:10px;font-size:1.5em;">By Air:</span><span style="margin-left:10px;font-size:1.3em;">Regular buses are available from the Gita Mandir Bus terminal at Ahmedabad, apart from the various bus-stops across the city to take you to Gh-0 or Ch-0 near DA-IICT.</span><br>
+                </div>
+            </div>
+        </div>
+        <div id="form" class="s12 m12 l12 z-depth-1 hide-on-med-and-down">
+            <h4 class="center-align" id="formheader">Say Something</h4>
+                <div class="row">
+                    <form class="col s12">
+                        <div class="row">
+                            <div class="input-field col s6">
+                                <input placeholder="Your Name..." id="first_name" type="text" class="validate">
+                            </div>
+                            <div class="input-field col s6">
+                                <input placeholder="Your Email..." id="last_name" type="text" class="validate">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s10">
+                                <textarea id="message" placeholder="Your Message..."class="materialize-textarea" required></textarea>
+                            </div>
+                            <div class="input-field col s2">
+                                <button class="btn waves-effect waves-light blue lighten-1 col s12 m12 l12 z-depth-2" type="submit"name="action" style="padding:0 10px;margin-top:50px;">Send
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+            </div>
+        </div>
+        <div id="footer" class="z-depth-1">
+            <div class="row" style="margin:0px 40px 0px 40px;">
+                <div class="col l4">
+                    <h4 class="center-align">DA-IICT</h4>
+                    <p style="font-size:1.3em;">The Placement Cell at DA-IICT is a concept in its own form. It works professionally abiding the hierarchy of the placement officer followed by the placement secretary, the faculty members and finally the student representatives from each stream. The hierarchy aims at touching all the aspects required for the smooth functioning of placement body of the reputed ICT forerunner Institution DA-IICT.</p>
+                </div>
+                <div class="col l4">
+                    <h4 class="center-align">About Us</h4>
+                    <p style="font-size:1.3em;">The Placement Cell at DA-IICT is a concept in its own form. It works professionally abiding the hierarchy of the placement officer followed by the placement secretary, the faculty members and finally the student representatives from each stream. The hierarchy aims at touching all the aspects required for the smooth functioning of placement body of the reputed ICT forerunner Institution DA-IICT.</p>
+                </div>
+                <div class="col l4">
+                    <h4 class="center-align">External Links</h4>
+                    <ul>
+                        <li><a href="#">Link 1</a></li>
+                        <li><a href="#">Link 2</a></li>
+                        <li><a href="#">Link 3</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </body>
