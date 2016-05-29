@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>DashBorad</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <style>
+            #header{
+                padding:50px;
+                background-color: #37ceff;
+                color:white;
+            }
+            #header p{
+                padding:10px;
+            }
+            .header-Header{
+                margin:40px 0px 40px 100px;
+            }
+            #companyHeader{
+                font-size: 44px;
+            }
+            b{
+                font-size:1.2em;
+            }
+            #headerInfo{
+                font-size:1.2em;
+            }
+            #sideContent{
+                margin-top:120px;
+            }
+            .button{
+                margin-top:10px;
+                background-color: #0a8db7;
+                padding:10px;
+                text-align: center;
+            }
+            #mainContent{
+                margin:40px 0px 40px 150px;
+            }
+            .card{
+                margin-top:35px;
+                margin-bottom:35px;
+            }
+            .skill{
+                display:inline-block;
+                padding:12px 23px 12px 23px;
+                text-align:center;
+                border:2.6px solid;
+                border-color:#37ceff;
+                border-radius: 4px;
+                margin-right:20px;
+            }
+            .margin{
+                margin-top:30px;
+                margin-bottom:50px;
+            }
+            .para{
+                font-size:1.3em;
+            }
+            .marginPara{
+                margin-top:25px;
+            }
+            .footer{
+                color:aliceblue;
+                background-color: #2e5574;
+                padding:20px;
+            }
+            ul#footerMenu li{
+                padding: 20px;
+                 display:inline;
+            }
+            .foot{
+                text-align: right;
+                margin-top: 25px;
+            }
+            a{
+                color:white;
+            }
+            #sidebutton{
+                text-align: left;
+                font-size:1.3em;
+                background-color: #00CC99;
+                 padding:10px 10px 10px 35px;
+                border:0px;
+            }
+            #sidebuttonnew{
+                text-align: left;
+                font-size:1.3em;
+                color:darkgrey;
+                margin-top:40px;
+                background-color: #f2f1f1;
+                padding:10px 10px 10px 35px;
+                border:0px;
+            }
+            @media only screen and (max-width: 1200px) {
+                #header{
+                    padding: 10px;
+                }
+                #mainContent{
+                    margin:40px 0px 40px 10px;
+                }
+                .header-Header{
+                    margin:40px 0px 40px 20px;
+                }
+                .skill{
+                    display:inline-block;
+                     margin:10px 0px 10px 5px;
+                }
+            }
+            @media only screen and (max-width: 480px) {
+                #header{
+                    padding: 10px;
+                }
+                #mainContent{
+                    margin:20px 0px 20px 10px;
+                }
+                .header-Header{
+                    margin:20px 0px 20px 10px;
+                }
+                #companyHeader{
+                    font-size: 36px;
+                }
+                .card{
+                    margin-top:10px;
+                    margin-bottom:10px;
+                }
+                .foot{
+                    text-align: left;
+                    margin-top: 10px;
+                }
+                .footer{
+                    padding:8px;
+                }
+                ul#footerMenu li{
+                    padding: 8px;
+                }
+                .skill{
+                    display:inline-block;
+                    margin:10px 0px 10px 5px;
+                    padding:8px;
+                }
+            }
+            
+        </style>
+    </head>
+    <body>
+        <!--NaviGation Bar HERE>
+
+        <!-->
+        <div class="container-fluid" id="mainBody">
+            <div class="row" id="header">
+                <div class="col-sm-12 col-md-12 col-lg-7">
+                    <div class="header-Header">
+                        <h1 id="companyHeader"><b>Senior UX/UI Designer</b> at <b>Circleboc Creative</b></h1>
+                        <p id="headerInfo">Your primary responsibility will be to create digital marketing content. Content will follow a defined marketing plan across multiple digital platforms including social media and pay per click. </p>
+                        <div class="row">
+                            <div class="col-lg-6 col-sm-6 col-md-6">
+                                <button type="button" class="col-lg-6 button btn btn-primary btn-block ">View Company</button>
+                            </div>
+                            <div class="col-lg-6 col-sm-6 col-md-6">
+                                <button type="button" class="col-lg-6 button btn btn-primary btn-block ">Apply For Job</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid">
+            <div class="row" id="contentPart">
+                    <div class="col-lg-7 col-sm-12 col-md-12" id="mainContent">
+                        <h2 style="color:#a0a0a0;">About this Role</h2>
+                        <div class="card">
+                            <div class="row">
+                                <div class="col-lg-3">
+                                    <img src="Morgan-Stanley.jpg" style="width:170px;border:solid;">
+                                </div>
+                                <div class="col-lg-5">
+                                    <h3><b>Web Desiginer</b></h3>
+                                    <p style="font-size:1.3em;">Newport, United Kingdom</p>
+                                    <h4><b>£18,000 - £25,000 + benefits </b></h4>
+                                </div>
+                            </div>
+                        </div>
+                        <p style="font-size:1.3em;">We are a leading commercial finance brokerage specialising in invoice finance. We work with the leading blue chip lenders and are the fastest growing brokerage in the UK. We have offices in Newport, Manchester and Eastbourne.</p>
+                        <h3 class="margin"><b>Skills</b></h3>
+                        <div class="margin">
+                            <span class="skill">HTML</span>
+                            <span class="skill">Bootstrap</span>
+                            <span class="skill">UI/UX</span>
+                            <span class="skill">Photo-Editing</span>
+                            <span class="skill">PhotoShop</span>
+                        </div>
+                        <h3 class="margin"><b>Description</b></h3>
+                        <p class="marginPara para">Digital Content / Marketing Executive </p>
+                        <p class="marginPara para">Simply Factoring Brokers - Newport </p>
+                        <p class="marginPara para">£18,000 - £25,000 a year</p>
+                        <p class="para">Working in the Newport office of a commercial finance broker, your primary responsibility will be to create digital marketing content. Content will follow a defined marketing plan across multiple digital platforms including social media and pay per click. You will have an opportunity to expand your marketing skill set if you are the right fit for this job. You will already be the kind of person who has the drive to learn something if that’s what it takes to get the job done.</p>
+                        <p class="marginPara para"><b>Key Responsibilities:</b></p>
+                        <p class="marginPara para">Deliver content to meet the SEO content strategy and publishing calendar.</p>
+                        <p class="marginPara para">Create high-value digital assets following a brief
+                        Follow best practice for digital content.</p>
+                        <p class="marginPara para">Work on link building campaigns.</p>
+                        <p class="marginPara para">Updating websites and blogs using CMS.</p>
+                        <p class="marginPara para">Analyse and review competitors.</p>
+                        <p class="marginPara para"><b>ESSENTIAL SKILLS:</b></p>
+                        <p class="marginPara para">Excellent copywriting with a high level of competency in English grammar, punctuation and spelling.</p>
+                        <p class="marginPara para">Ability to self-edit.</p>
+                        <p class="marginPara para">Organised and familiar with fast-paced working environments with strong organisational skills.</p>
+                        <p class="marginPara para">Positive can do attitude, flexible, working collaboratively with teams.</p>
+                        <p class="marginPara para"><b>DESIRABLE SKILLS:</b></p>
+                        <p class="marginPara para">A passion for delivering great online customer experience.</p>
+                        <p class="para">An ability to create content that will simplify complex products and services to create enquiries.</p>
+                        <p class="marginPara para">Degree educated</p>
+                        <p class="para">Javascript</p>
+                        <p class="para">Experience in measuring digital activity & performance.</p>
+                        <p class="marginPara para">Working knowledge Google Analytics, Bing, Moz.</p>
+                        <p class="marginPara para">Excellent problem solving skills with an ability and willingness to learn new digital </p>
+                        <p class="marginPara para"><b>Tools</b></p>
+                        <p class="marginPara para">SEO copywriting</p>
+                        <p class="para">CRO</p>
+                        <p class="para">CSS</p>
+                        <p class="para">HTML</p>
+                        <p class="para">Wordpress</p>
+                        <p class="para">InDesign</p>
+                        <p class="para">Photoshop / Illustrator </p>
+                        <p class="para">MS Excel</p>
+                        <p class="para">MS Word</p>
+                    </div>
+                    <div class="col-lg-3 hidden-sm hidden-md hidden-xs" id="sideContent">
+                        <button id="sidebutton" type="button" class="btn btn-primary btn-block"><span class="glyphicon glyphicon-file" style="margin-right:10px;color:white;"></span>Apply For Job</button>
+                        <button id="sidebuttonnew" type="button" class="btn btn-primary btn-block"><span class="glyphicon glyphicon-search" style="margin-right:10px;color:#c9bbbb;"></span>Veiw Company</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="row">
+                <div class="col-lg-4 hidden-xs">
+                    <h1>Logo</h1>
+                </div>
+                <div class="col-lg-8 col-md-12 col-sm-12 col-xs-12 foot">
+                    <ul id="footerMenu">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Links</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
