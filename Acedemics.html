@@ -20,6 +20,8 @@
     <link href="assets/css/material-kit.css" rel="stylesheet"/>
     
     <style>
+        
+        /* Content Style-sheets*/
         body{
             background-color: white;
         }
@@ -35,7 +37,7 @@
             color: #717171;
         }
         ul.nav-bar{
-            top: 30px;
+            
             position: fixed;
             
         }
@@ -45,8 +47,7 @@
         a:hover{
             color:#b48484;
         }
-        li.active{
-            color:black;
+        ul.nav-bar li.active{
             font-size:1.2em;
             border-left: solid;
             border-color: #ba5b5b;
@@ -54,18 +55,134 @@
         .side-display{
             position: fixed;
         }
+        
+        /* Header Style-Sheets*/
+        
+        
+        .top-header{
+            font-size:.8em;
+            color:#eaeaea;
+            padding: 7px;
+            background-color: #5151c1;
+        }
+        .navbar-default{
+            color:#b4b4b4;
+            background-color: white;
+        }
+        ul.nav-head li{
+            color:#a5a5a5;   
+        }
+        ul.nav-head li.active{
+            color:#00abe5;
+        }
+        ul.nav-head li:hover{
+            border-bottom: solid;
+            border-bottom-color: #00abe5;
+        }
+        .main-nav{
+            margin-bottom:2px;
+            padding: 0px;
+            background-color: white;
+        }
+        ul.nav-head{
+                margin-left: 100px;
+        }
+        ul.nav-head li.dropdown ul.dropdown-menu{
+            box-shadow: 1px;
+            padding: 10px 0px;
+            background: white;
+        }
+        ul.nav-head li.dropdown ul.dropdown-menu li:hover{
+            background-color: #d8d8d8;
+            border-bottom: none;
+        }
+        ul.nav-head li.dropdown ul.dropdown-menu li.menu-item a{
+            color: #535353;
+            display:inline-block;
+        }
+        ul.nav-head li.dropdown ul.dropdown-menu li.menu-item a:hover{
+            background-color: #d8d8d8;;
+            border-bottom: none;
+            box-shadow: none;
+        }
+        /* Footer Style Sheets*/
+        .footer-content{
+            margin-bottom: -12px;
+            padding: 10px 0px;
+            color:white;
+            background-color: #262626;
+        }
+        .footer-content p{
+            font-size:0.9em;
+            color:#9f9f9f;
+        }
+        .footer-content a{
+            font-size:0.9em;
+            color:#9f9f9f;
+        }
+        .footer-contacts{
+            text-align: right;
+        }
+        .footer-links{
+            margin-bottom:-14px;
+            background-color: #dbdbdb;
+            padding-top: 5px;
+            text-align: center;
+            font-size:0.9em;
+        }
     </style>
 </head>
 
 <body data-spy="scroll" data-target="#myScrollspy" data-offset="40" ng-app="myApp" ng-controller="myCtrl">
 
 <!-- Navbar will come here -->
-
+<div class="top-header hidden-xs hidden-sm">
+    <div class="container">
+        <span><i class="material-icons" style="font-size:11px;">call</i> +91 9328994143 |  </span>
+        <span><span class="glyphicon glyphicon-envelope"></span>   placement@daiict.ac.in</span>
+    </div>
+</div>
+    <nav class="navbar navbar-light main-nav hidden-xs hidden-sm">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand head" href="#" style="color:#808080;font-size:1.6em;">Placement Cell, DA-IICT</a>
+            </div>
+            <div class="container">
+                <ul class="nav navbar-nav nav-head">
+                    <li class="active"><a href="#">Home</a></li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">ACEDEMICS<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li class="menu-item"><a href="#">Academics @ DA-IICT</a></li>
+                            <li class="menu-item"><a href="#">About ICT</a></li>
+                            <li class="menu-item"><a href="#">(B.Tech) Honours with minor in Computational Science</a></li>
+                            <li class="menu-item"><a href="#">Master of Technology (M.Tech)</a></li>
+                            <li class="menu-item"><a href="#">Master of Science − Information Technology (M.Sc−IT)</a></li>
+                            <li class="menu-item"><a href="#">M.Des</a></li>
+                            <li class="menu-item"><a href="#">M.Sc−ARD</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">WHY DAIICT?<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li class="menu-item"><a href="#">Why Recruit @ DA-IICT</a></li>
+                            <li class="menu-item"><a href="#">Academics @ DA-IICT</a></li>
+                            <li class="menu-item"><a href="#">DA-IICT Ranking</a></li>
+                            <li class="menu-item"><a href="#">Demography</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">FOR COMPANIES</a></li>
+                    <li><a href="#">CONTACT US</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+   
 <!-- end navbar -->
 
 <div class="wrapper" >
 	<!-- you can use the class main-raised if you want the main area to be as a page with shadows -->
-	<div class=" main">
+    <div class=" main">
         <div class="container">
             <div class="row">
                 <div class="col-lg-9 col-sm-9 col-md-9 main-content">
@@ -117,23 +234,49 @@
                     <div class="container">
                         <div id="myScrollspy">
                             <ul class="nav nav-stacked nav-bar">
-                                <li ng-click="displayInfo('Academics @ DA-IICT')" class="active"><a href="#section1">Academics @ DA-IICT</a></li>
-                                <li ng-click="displayInfo('About ICT')"><a href="#section2">About ICT</a></li>
-                                <li ng-click="displayInfo('Bachelor of Technology (B.Tech)')"><a href="#section3">Bachelor of Technology (B.Tech)</a></li>
-                                <li ng-click="displayInfo('Bachelor of Technology (B.Tech) Honours with minor in Computational Science')"><a href="#section4">Bachelor of Technology (B.Tech) Honours with minor in Computational Science</a></li>
-                                <li ng-click="displayInfo('Master of Technology (M.Tech)')"><a href="#section5">Master of Technology (M.Tech)</a></li>
-                                <li ng-click="displayInfo('Master of Science − Information Technology (M.Sc−IT)')"><a href="#section6">Master of Science − Information Technology (M.Sc−IT)</a></li>
-                                <li ng-click="displayInfo('Master of Design (M.Des)')"><a href="#section7">Master of Design (M.Des)</a></li>
-                                <li ng-click="displayInfo('Master of Science (ICT) − Agriculture and Rural Development (M.Sc−ARD)')"><a href="#section8">Master of Science (ICT) − Agriculture and Rural Development (M.Sc−ARD)</a></li>
+                                <li class="active"><a href="#section1">Academics @ DA-IICT</a></li>
+                                <li><a href="#section2">About ICT</a></li>
+                                <li><a href="#section3">Bachelor of Technology (B.Tech)</a></li>
+                                <li><a href="#section4">Bachelor of Technology (B.Tech) Honours with minor in Computational Science</a></li>
+                                <li><a href="#section5">Master of Technology (M.Tech)</a></li>
+                                <li><a href="#section6">Master of Science − Information Technology (M.Sc−IT)</a></li>
+                                <li><a href="#section7">Master of Design (M.Des)</a></li>
+                                <li><a href="#section8">Master of Science (ICT) − Agriculture and Rural Development (M.Sc−ARD)</a></li>
                             </ul>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-		
+    </div>		
 </div>
+    <div class="footer">
+        <div class="footer-content">
+            <div class="row">
+                <div class="col-lg-3 col-lg-offset-2 col-md-4 col-sm-12 col-xs-12">
+                    <h4>About Placement Cell</h4>
+                    <p>The Placement Cell at DA-IICT is a concept in its own form. It works professionally abiding the hierarchy of the placement officer followed by the placement secretary, the faculty members and finally the student representatives from each stream. The hierarchy aims at touching all the aspects required for the smooth functioning of placement body of the reputed ICT forerunner Institution DA-IICT.</p>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-12 col-xs-12">
+                    <h4>Contact Us</h4>
+                    <p>Dhirubhai Ambani Institute of Information and Communication Technology, Near Indroda Circle,<br>Gandhinagar (382 007),Gujarat (India)</p>
+                    <p><i class="material-icons" style="font-size:14px;">call</i> Mr. Sunil Jain:<span class="footer-contacts"> (M) +91 9328994143</span></p>
+                    <p><i class="material-icons" style="font-size:14px;">call</i> Dr. Ranendu Ghosh:<span class="footer-contacts">(O) +91 (79) 30510649 <br><span style="margin-left:125px;">(M) +91 9638851429</span></p>
+                    <p><span class="glyphicon glyphicon-envelope"></span> placement@daiict.ac.in</p>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-12 col-xs-12">
+                    <h4>External Links</h4>
+                    <ul>
+                        <li><a href="#">Placement Brochure</a></li>
+                        <li><a href="#">Facebook</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-links">
+            <p>2016−17 © Placement Cell, DA-IICT.</p>
+        </div>
+    </div>
 </body>
 
 	<!--   Core JS Files   -->
