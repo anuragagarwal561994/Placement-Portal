@@ -22,257 +22,287 @@
     <style>
         
         /* Content Style-sheets*/
-        body{
+        body {
             background-color: white;
         }
-        .info-content{
+        .info-content {
             margin:30px 0px;
         }
-        .info-content p{
+        .info-content p {
             font-size: 1.1em;
             color: #717171;
         }
-        .info-content ul{
+        .info-content ul {
             font-size: 1.1em;
             color: #717171;
         }
-        ul.nav-bar{
-            
+        ul.nav-bar {
+            margin-top: 20px;
             position: fixed;
             
         }
-        a{
+        a {
             color:#b48484;
         }
-        a:hover{
+        a:hover {
             color:#b48484;
         }
-        ul.nav-bar li.active{
-            font-size:1.2em;
+        ul.nav-bar li.active {
+            
             border-left: solid;
             border-color: #ba5b5b;
         }
-        .side-display{
+        .side-display {
             position: fixed;
         }
         
         /* Header Style-Sheets*/
         
         
-        .top-header{
-            font-size:.8em;
-            color:#eaeaea;
-            padding: 7px;
-            background-color: #5151c1;
+        .top-header {
+            font-size:1em;
+            color:#cccccc;
+            padding: 12px;
+            background-color: rgb(75, 87, 178);
         }
-        .navbar-default{
+        .navbar-default {
             color:#b4b4b4;
             background-color: white;
         }
-        ul.nav-head li{
+        ul.nav-head li {
+            border-bottom: solid;
+            border-bottom-color:  white;
+            font-family:sans-serif;
+            padding-top:20px;
+            padding-bottom: 20px;
             color:#a5a5a5;   
         }
-        ul.nav-head li.active{
-            color:#00abe5;
+        ul.nav-head li.active {
+            color: rgb(75, 87, 178);
         }
         ul.nav-head li:hover{
             border-bottom: solid;
-            border-bottom-color: #00abe5;
+            border-bottom-color:  rgb(75, 87, 178);
         }
-        .main-nav{
+        .main-nav {
+            box-shadow: 2px 2px #cbcbcb;
             margin-bottom:2px;
             padding: 0px;
             background-color: white;
         }
-        ul.nav-head{
-                margin-left: 100px;
+        ul.nav-head {
+            margin-left: 100px;
         }
-        ul.nav-head li.dropdown ul.dropdown-menu{
-            box-shadow: 1px;
-            padding: 10px 0px;
+        ul.nav-head li.dropdown ul.dropdown-menu {
+            box-shadow: 1px 1px 1px;
             background: white;
         }
-        ul.nav-head li.dropdown ul.dropdown-menu li:hover{
-            background-color: #d8d8d8;
+        ul.nav-head li.dropdown ul.dropdown-menu li {
+            padding:0px;
+        }
+        ul.nav-head li.dropdown ul.dropdown-menu li:hover {
+            background-color: #ebebeb;
             border-bottom: none;
         }
-        ul.nav-head li.dropdown ul.dropdown-menu li.menu-item a{
+        ul.nav-head li.dropdown ul.dropdown-menu li.menu-item a {
             color: #535353;
             display:inline-block;
         }
-        ul.nav-head li.dropdown ul.dropdown-menu li.menu-item a:hover{
-            background-color: #d8d8d8;;
+        ul.nav-head li.dropdown ul.dropdown-menu li.menu-item a:hover {
+            background-color: #ebebeb;
             border-bottom: none;
             box-shadow: none;
         }
+        #info {
+            font-size:1.05em;
+        }
         /* Footer Style Sheets*/
-        .footer-content{
+        .footer {
+            z-index:1;
+            position:absolute;
+        }
+        .footer-content {
             margin-bottom: -12px;
             padding: 10px 0px;
             color:white;
             background-color: #262626;
         }
-        .footer-content p{
+        .footer-content p {
             font-size:0.9em;
             color:#9f9f9f;
         }
-        .footer-content a{
+        .footer-content a {
             font-size:0.9em;
             color:#9f9f9f;
         }
-        .footer-contacts{
+        .footer-contacts {
             text-align: right;
         }
-        .footer-links{
+        .footer-links {
             margin-bottom:-14px;
-            background-color: #dbdbdb;
+            background-color: #f7f7f7;
             padding-top: 5px;
             text-align: center;
             font-size:0.9em;
         }
+        
     </style>
 </head>
 
 <body data-spy="scroll" data-target="#myScrollspy" data-offset="40" ng-app="myApp" ng-controller="myCtrl">
 
 <!-- Navbar will come here -->
-<div class="top-header hidden-xs hidden-sm">
-    <div class="container">
-        <span><i class="material-icons" style="font-size:11px;">call</i> +91 9328994143 |  </span>
-        <span><span class="glyphicon glyphicon-envelope"></span>   placement@daiict.ac.in</span>
-    </div>
-</div>
-    <nav class="navbar navbar-light main-nav hidden-xs hidden-sm">
-        <div class="container">
-            <div class="navbar-header">
-                <a class="navbar-brand head" href="#" style="color:#808080;font-size:1.6em;">Placement Cell, DA-IICT</a>
+    <div class="top-header hidden-xs hidden-sm">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-3 col-lg-offset-1">
+                    <span style="margin-right:10px;"><i class="material-icons" style="font-size:14px;margin-right:10px;">call</i>+91 9328994143</span>
+                    <span style="margin-left:10px;margin-right:10px;">|</span>
+                    <span><i class="material-icons" style="font-size:14px;margin-right:10px;">mail</i>placement@daiict.ac.in</span>
+                </div>
+                <div class="col-lg-2 col-lg-offset-6">
+                    <span>Login / Sign Up</span>
+                </div>
             </div>
-            <div class="container">
-                <ul class="nav navbar-nav nav-head">
-                    <li class="active"><a href="#">Home</a></li>
-                    <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">ACEDEMICS<span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li class="menu-item"><a href="#">Academics @ DA-IICT</a></li>
-                            <li class="menu-item"><a href="#">About ICT</a></li>
-                            <li class="menu-item"><a href="#">(B.Tech) Honours with minor in Computational Science</a></li>
-                            <li class="menu-item"><a href="#">Master of Technology (M.Tech)</a></li>
-                            <li class="menu-item"><a href="#">Master of Science − Information Technology (M.Sc−IT)</a></li>
-                            <li class="menu-item"><a href="#">M.Des</a></li>
-                            <li class="menu-item"><a href="#">M.Sc−ARD</a></li>
+        </div>
+    </div>
+    <nav class="navbar navbar-light main-nav hidden-xs hidden-sm">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="navbar-header">
+                        <img src="daiict.png" style="height:60px;margin-left:30px;margin-top:10px;">
+                    </div>
+                </div>
+                <div class="col-lg-9">
+                    <div class="container-fluid">
+                        <ul class="nav navbar-nav nav-head">
+                            <li class="active"><a href="#" id="info">Home</a></li>
+                            <li class="dropdown">
+                                <a class="dropdown-toggle"  data-toggle="dropdown" href="#" id="info">ACEDEMICS<span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li class="menu-item"><a href="#">Academics @ DA-IICT</a></li>
+                                    <li class="menu-item"><a href="#">About ICT</a></li>
+                                    <li class="menu-item"><a href="#">(B.Tech) Honours with minor in Computational Science</a></li>
+                                    <li class="menu-item"><a href="#">Master of Technology (M.Tech)</a></li>
+                                    <li class="menu-item"><a href="#">Master of Science − Information Technology (M.Sc−IT)</a></li>
+                                    <li class="menu-item"><a href="#">M.Des</a></li>
+                                    <li class="menu-item"><a href="#">M.Sc−ARD</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a class="dropdown-toggle"  data-toggle="dropdown" href="#" id="info">WHY DAIICT?<span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li class="menu-item"><a href="#">Why Recruit @ DA-IICT</a></li>
+                                    <li class="menu-item"><a href="#">Academics @ DA-IICT</a></li>
+                                    <li class="menu-item"><a href="#">DA-IICT Ranking</a></li>
+                                    <li class="menu-item"><a href="#">Demography</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#" id="info">FOR COMPANIES</a></li>
+                            <li><a href="#" id="info">CONTACT US</a></li>
                         </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">WHY DAIICT?<span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li class="menu-item"><a href="#">Why Recruit @ DA-IICT</a></li>
-                            <li class="menu-item"><a href="#">Academics @ DA-IICT</a></li>
-                            <li class="menu-item"><a href="#">DA-IICT Ranking</a></li>
-                            <li class="menu-item"><a href="#">Demography</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#">FOR COMPANIES</a></li>
-                    <li><a href="#">CONTACT US</a></li>
-                </ul>
+                    </div>
+                </div>
             </div>
         </div>
     </nav>
    
 <!-- end navbar -->
 
-<div class="wrapper" >
+    <div class="wrapper" >
 	<!-- you can use the class main-raised if you want the main area to be as a page with shadows -->
-    <div class=" main">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-9 col-sm-9 col-md-9 main-content">
-                    <div class="info-content" id="section1">
-                        <h2>Academics @ DA-IICT</h2>
-                        <p>DA-IICT has a lush green campus. Located in Gandhinagar, Gujarat DA-IICT has a state-of-art infrastructure which endows students with a well-balanced environment to learn and grow. With highly qualified, au courant and proficient faculty, DA-IICT is a prominent research and educational institution which encourages interactive pedagogy enabling uninterrupted flow of knowledge.</p>
-                        <p>The institute offers a well-furnished undergraduate programme - B.Tech.(ICT) and minutely fabricated post graduate programmes - M.Tech.(ICT), M.Sc.(IT), M.Sc.(ICT in ARD) and M.Des(CD). These programmes aim at producing new class of ICT engineers adorned with very strong basics, intellectual outlook, out of the box line of thought. The comprehensive and rigorous post graduate programmes endow students with broad vision of science and understanding of business management and social environment.</p>
-                    </div>
-                    <div class="info-content" id="section2">
-                        <h2>About ICT</h2>
-                        <p>DA-IICT is a forerunner in the field of ICT. This fundamental innovation, combining Electronics and Communication Engineering (ECE) and Computer Sciences and Engineering (CSE), was embedded in the large matrix of interdisciplinary subjects including Design, Science and Management, Film and Animation along with the traditional Humanities and Social Sciences. This vision, we are proud to say, is an amalgamation of Liberal Arts and an engineering institute. It visualizes the student as a professional and as a citizen dealing with knowledge systems at large but with core competence in ICT. The curriculum designed by eminent faculty very well exemplifies the convergence of skills required by ICT. Research and Development is the most important component of the education system, which puts the institute at par with many other reputed institutes in the world. Projects, which are aimed at providing practical knowledge and experience, form an integral component of the education system. The curriculum is designed to produce competent and confident professionals with knowledge and expertise to meet the needs of the present and the future world.</p>
-                    </div>
-                    <div class="info-content" id="section3">
-                        <h2>Bachelor of Technology (B.Tech)</h2>
-                        <p>DA-IICT is a forerunner in the field of ICT. This fundamental innovation, combining Electronics and Communication Engineering (ECE) and Computer Sciences and Engineering (CSE), was embedded in the large matrix of interdisciplinary subjects including Design, Science and Management, Film and Animation along with the traditional Humanities and Social Sciences. This vision, we are proud to say, is an amalgamation of Liberal Arts and an engineering institute. It visualizes the student as a professional and as a citizen dealing with knowledge systems at large but with core competence in ICT. The curriculum designed by eminent faculty very well exemplifies the convergence of skills required by ICT. Research and Development is the most important component of the education system, which puts the institute at par with many other reputed institutes in the world. Projects, which are aimed at providing practical knowledge and experience, form an integral component of the education system. The curriculum is designed to produce competent and confident professionals with knowledge and expertise to meet the needs of the present and the future world.</p>
-                    </div>
-                    <div class="info-content" id="section4">
-                        <h2>Bachelor of Technology (B.Tech) Honours with minor in Computational Science</h2>
-                        <p>The B.Tech (Honours in ICT with minor in Computational Science) has been recently started at DA-IICT to impart the necessary knowledge and insight to the students to build computational models to understand, analyze and address fundamental problems in the areas of societal importance. Computational science involves use of advanced computing capabilities and IT knowledge to understand and solve complex science, engineering and social problems aimed in improving products, processes, and work-flows.</p>
-                        <p>The program is focused on two main lines – theoretical learning and practical implementation. The minor in CS provides an opportunity to pursue a focused set of courses (core and electives) that emphasize all aspects of Computational Science. The minor requires extra 30 credits in addition to what an ICT undergraduate takes and the students must take 6 core courses in the areas of Mathematics, Physics, Numerical and Computational Methods, Modeling and Simulation, High Performance Computing, Parallel Programming, Data analysis and Visualization. The electives are further designed to sharpen thisskill-set by providing domain knowledge in interdisciplinary areas ranging from engineering to biological applications.</p>
-                    </div>
-                    <div class="info-content" id="section5">
-                        <h2>Master of Technology (M.Tech)</h2>
-                        <p>Master of Technology (Information and Communication Technology) is a two year Research oriented program. It focuses on providing a domain capability to each DA-IICTian, which allows them to have a meaningful career in industry and cater to the real-time problems with innovative solutions. The program curriculum comprises of few core courses and a wide range of elective courses. Students are required to pursue one full year (two semesters) of research under the guidance of a faculty advisor and submit a Master’s Thesis. The high quality of research facilities and the opportunity to work under one of the finest faculties in India, aided with the capability of DA-IICTians to think in new horizons, has led this course at DA-IICT to be a research benchmark in the country</p>
-                        <p>This course has been one of the primary choices of students who want to pursue a career in research and academics. Although the students specialize in one of the four streams mentioned below, the program is lenient to work and pursue research in cross-specialization, which enhances students to have multi-domain knowledge which is an advantage for today’s industry</p>
-                        <ul>
-                            <li>Machine Intelligence (MI) - The objective of the Machine Intelligence stream is to carry out basic research in an attempt to make a machine behave like a human being.</li>
-                            <li>Computer Networks (CNS) - Aims at imparting cutting edge technical knowledge to the students who wish to pursue their careers in the field of computer networks.</li>
-                            <li>Communications (CSP) - Keeping in mind the high frequency electronics and communication revolution in the last decade, the Communication Systems program has been designed to equip the students with the concepts of various communication technologies.</li>
-                            <li>VLSI-ES (VLSI) - This course has won the legacy of being one of the flagship courses at DA-IICT. The students here have the privilege of studying from the best in the field of embedded systems and VLSI.</li>
-                        </ul>
-                    </div>
-                    <div class="info-content" id="section6">
-                        <h2>Master of Science − Information Technology (M.Sc−IT)</h2>
-                        <p>A two year integrated course which secures a professional degree in information technology and sharpens analytical skills. It provides sound theoretical background which visualizes system designing and articulates trending designs and tools. It produces system analysts and designers and also develops software engineers by creating awareness about modern practices. The program implementation is based on the philosophy that students are motivated to appreciate theoretical concepts by practicing and solving real problems. The program structure consists of core courses and a basket of electives. The course involves a 4 week summer internship in the first year substantiated by Industrial internship in the last semester imbibing current industrial practices. Program structure and course contents are periodically revised to cater to the needs of dynamic IT industry. All science , commerce and engineering graduates are eligible for enrolling to the course.</p>
-                    </div>
-                    <div class="info-content" id="section7">
-                        <h2>Master of Design (M.Des)</h2>
-                        <p>The Masters in Design (Communication Design) is a full time two year PG program(4 semesters). The program offers students, the opportunity to specialize in visual Communication Design and Interaction Design. Its unique pedagogic format encourages learning of basic design skills, the uses of digital technologies and an understanding of the cultural and aesthetic aspects of communication practices. The program prepares young professionals for careers in creative media industries and the academia.</p>
-                        <h4>Our Philosophy</h4>
-                        <p>Design is a mode of creative and critical thinking. It encourages you to explore your ideas but also put these to test. A successful Designer is ceaselessly engaged in processes of editing and refining thoughts and ideas.<b>The search is always for the perfect solution.</b></p>
-                    </div>
-                    <div class="info-content" id="section8">
-                        <h2>Master of Science (ICT) − Agriculture and Rural Development (M.Sc−ARD)</h2>
-                        <p>DA-IICT also offers a Master of Science degree in ICT in Agriculture and Rural Development. This program prepares professionals who will be able to use ICT as a means for developing innovative solutions to existing and emerging challenges in the area of agriculture, rural development, rural entrepreneurship, rural marketing and services for sustainable livelihood security by enabling rural people to take control of their future. This program offers a unique career opportunity to the students that ranges from Agribusiness to Commodity Exchanges and from Research to Market Analysis, and thus aims to occupy the unique developmental niche in the field of agricultural and sustainable development using ICT. The courses taught in this program include Computer Basics along with Rural Finance, Approaches to Sustainable Development, E-governance, Agribusiness Management, ICT Infrastructure Management and others. An Industrial/Research internship and a thesis based on the same are also included in the program.</p>
-                    </div>
-                </div>
-                <div class="verticle-nav-bar col-lg-3 col-sm-3 col-md-3 hidden-xs">
-                    <div class="container">
-                        <div id="myScrollspy">
-                            <ul class="nav nav-stacked nav-bar">
-                                <li class="active"><a href="#section1">Academics @ DA-IICT</a></li>
-                                <li><a href="#section2">About ICT</a></li>
-                                <li><a href="#section3">Bachelor of Technology (B.Tech)</a></li>
-                                <li><a href="#section4">Bachelor of Technology (B.Tech) Honours with minor in Computational Science</a></li>
-                                <li><a href="#section5">Master of Technology (M.Tech)</a></li>
-                                <li><a href="#section6">Master of Science − Information Technology (M.Sc−IT)</a></li>
-                                <li><a href="#section7">Master of Design (M.Des)</a></li>
-                                <li><a href="#section8">Master of Science (ICT) − Agriculture and Rural Development (M.Sc−ARD)</a></li>
+        <div class=" main">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-9 col-sm-9 col-md-9 main-content">
+                        <div class="info-content" id="section1">
+                            <h2>Academics @ DA-IICT</h2>
+                            <p>DA-IICT has a lush green campus. Located in Gandhinagar, Gujarat DA-IICT has a state-of-art infrastructure which endows students with a well-balanced environment to learn and grow. With highly qualified, au courant and proficient faculty, DA-IICT is a prominent research and educational institution which encourages interactive pedagogy enabling uninterrupted flow of knowledge.</p>
+                            <p>The institute offers a well-furnished undergraduate programme - B.Tech.(ICT) and minutely fabricated post graduate programmes - M.Tech.(ICT), M.Sc.(IT), M.Sc.(ICT in ARD) and M.Des(CD). These programmes aim at producing new class of ICT engineers adorned with very strong basics, intellectual outlook, out of the box line of thought. The comprehensive and rigorous post graduate programmes endow students with broad vision of science and understanding of business management and social environment.</p>
+                        </div>
+                        <div class="info-content" id="section2">
+                            <h2>About ICT</h2>
+                            <p>DA-IICT is a forerunner in the field of ICT. This fundamental innovation, combining Electronics and Communication Engineering (ECE) and Computer Sciences and Engineering (CSE), was embedded in the large matrix of interdisciplinary subjects including Design, Science and Management, Film and Animation along with the traditional Humanities and Social Sciences. This vision, we are proud to say, is an amalgamation of Liberal Arts and an engineering institute. It visualizes the student as a professional and as a citizen dealing with knowledge systems at large but with core competence in ICT. The curriculum designed by eminent faculty very well exemplifies the convergence of skills required by ICT. Research and Development is the most important component of the education system, which puts the institute at par with many other reputed institutes in the world. Projects, which are aimed at providing practical knowledge and experience, form an integral component of the education system. The curriculum is designed to produce competent and confident professionals with knowledge and expertise to meet the needs of the present and the future world.</p>
+                        </div>
+                        <div class="info-content" id="section3">
+                            <h2>Bachelor of Technology (B.Tech)</h2>
+                            <p>DA-IICT is a forerunner in the field of ICT. This fundamental innovation, combining Electronics and Communication Engineering (ECE) and Computer Sciences and Engineering (CSE), was embedded in the large matrix of interdisciplinary subjects including Design, Science and Management, Film and Animation along with the traditional Humanities and Social Sciences. This vision, we are proud to say, is an amalgamation of Liberal Arts and an engineering institute. It visualizes the student as a professional and as a citizen dealing with knowledge systems at large but with core competence in ICT. The curriculum designed by eminent faculty very well exemplifies the convergence of skills required by ICT. Research and Development is the most important component of the education system, which puts the institute at par with many other reputed institutes in the world. Projects, which are aimed at providing practical knowledge and experience, form an integral component of the education system. The curriculum is designed to produce competent and confident professionals with knowledge and expertise to meet the needs of the present and the future world.</p>
+                        </div>
+                        <div class="info-content" id="section4">
+                            <h2>Bachelor of Technology (B.Tech) Honours with minor in Computational Science</h2>
+                            <p>The B.Tech (Honours in ICT with minor in Computational Science) has been recently started at DA-IICT to impart the necessary knowledge and insight to the students to build computational models to understand, analyze and address fundamental problems in the areas of societal importance. Computational science involves use of advanced computing capabilities and IT knowledge to understand and solve complex science, engineering and social problems aimed in improving products, processes, and work-flows.</p>
+                            <p>The program is focused on two main lines – theoretical learning and practical implementation. The minor in CS provides an opportunity to pursue a focused set of courses (core and electives) that emphasize all aspects of Computational Science. The minor requires extra 30 credits in addition to what an ICT undergraduate takes and the students must take 6 core courses in the areas of Mathematics, Physics, Numerical and Computational Methods, Modeling and Simulation, High Performance Computing, Parallel Programming, Data analysis and Visualization. The electives are further designed to sharpen thisskill-set by providing domain knowledge in interdisciplinary areas ranging from engineering to biological applications.</p>
+                        </div>
+                        <div class="info-content" id="section5">
+                            <h2>Master of Technology (M.Tech)</h2>
+                            <p>Master of Technology (Information and Communication Technology) is a two year Research oriented program. It focuses on providing a domain capability to each DA-IICTian, which allows them to have a meaningful career in industry and cater to the real-time problems with innovative solutions. The program curriculum comprises of few core courses and a wide range of elective courses. Students are required to pursue one full year (two semesters) of research under the guidance of a faculty advisor and submit a Master’s Thesis. The high quality of research facilities and the opportunity to work under one of the finest faculties in India, aided with the capability of DA-IICTians to think in new horizons, has led this course at DA-IICT to be a research benchmark in the country</p>
+                            <p>This course has been one of the primary choices of students who want to pursue a career in research and academics. Although the students specialize in one of the four streams mentioned below, the program is lenient to work and pursue research in cross-specialization, which enhances students to have multi-domain knowledge which is an advantage for today’s industry</p>
+                            <ul>
+                                <li>Machine Intelligence (MI) - The objective of the Machine Intelligence stream is to carry out basic research in an attempt to make a machine behave like a human being.</li>
+                                <li>Computer Networks (CNS) - Aims at imparting cutting edge technical knowledge to the students who wish to pursue their careers in the field of computer networks.</li>
+                                <li>Communications (CSP) - Keeping in mind the high frequency electronics and communication revolution in the last decade, the Communication Systems program has been designed to equip the students with the concepts of various communication technologies.</li>
+                                <li>VLSI-ES (VLSI) - This course has won the legacy of being one of the flagship courses at DA-IICT. The students here have the privilege of studying from the best in the field of embedded systems and VLSI.</li>
                             </ul>
+                        </div>
+                        <div class="info-content" id="section6">
+                            <h2>Master of Science − Information Technology (M.Sc−IT)</h2>
+                            <p>A two year integrated course which secures a professional degree in information technology and sharpens analytical skills. It provides sound theoretical background which visualizes system designing and articulates trending designs and tools. It produces system analysts and designers and also develops software engineers by creating awareness about modern practices. The program implementation is based on the philosophy that students are motivated to appreciate theoretical concepts by practicing and solving real problems. The program structure consists of core courses and a basket of electives. The course involves a 4 week summer internship in the first year substantiated by Industrial internship in the last semester imbibing current industrial practices. Program structure and course contents are periodically revised to cater to the needs of dynamic IT industry. All science , commerce and engineering graduates are eligible for enrolling to the course.</p>
+                        </div>
+                        <div class="info-content" id="section7">
+                            <h2>Master of Design (M.Des)</h2>
+                            <p>The Masters in Design (Communication Design) is a full time two year PG program(4 semesters). The program offers students, the opportunity to specialize in visual Communication Design and Interaction Design. Its unique pedagogic format encourages learning of basic design skills, the uses of digital technologies and an understanding of the cultural and aesthetic aspects of communication practices. The program prepares young professionals for careers in creative media industries and the academia.</p>
+                            <h4>Our Philosophy</h4>
+                            <p>Design is a mode of creative and critical thinking. It encourages you to explore your ideas but also put these to test. A successful Designer is ceaselessly engaged in processes of editing and refining thoughts and ideas.<b>The search is always for the perfect solution.</b></p>
+                        </div>
+                        <div class="info-content" id="section8">
+                            <h2>Master of Science (ICT) − Agriculture and Rural Development (M.Sc−ARD)</h2>
+                            <p>DA-IICT also offers a Master of Science degree in ICT in Agriculture and Rural Development. This program prepares professionals who will be able to use ICT as a means for developing innovative solutions to existing and emerging challenges in the area of agriculture, rural development, rural entrepreneurship, rural marketing and services for sustainable livelihood security by enabling rural people to take control of their future. This program offers a unique career opportunity to the students that ranges from Agribusiness to Commodity Exchanges and from Research to Market Analysis, and thus aims to occupy the unique developmental niche in the field of agricultural and sustainable development using ICT. The courses taught in this program include Computer Basics along with Rural Finance, Approaches to Sustainable Development, E-governance, Agribusiness Management, ICT Infrastructure Management and others. An Industrial/Research internship and a thesis based on the same are also included in the program.</p>
+                        </div>
+                    </div>
+                    <div class="verticle-nav-bar col-lg-3 col-sm-3 col-md-3 hidden-xs">
+                        <div class="container">
+                            <div id="myScrollspy">
+                                <ul class="nav nav-stacked nav-bar">
+                                    <li class="active"><a href="#section1">Academics @ DA-IICT</a></li>
+                                    <li><a href="#section2">About ICT</a></li>
+                                    <li><a href="#section3">Bachelor of Technology (B.Tech)</a></li>
+                                    <li><a href="#section4">B.Tech Honours with minor in Computational Science</a></li>
+                                    <li><a href="#section5">Master of Technology (M.Tech)</a></li>
+                                    <li><a href="#section6">Master of Science − Information Technology (M.Sc−IT)</a></li>
+                                    <li><a href="#section7">Master of Design (M.Des)</a></li>
+                                    <li><a href="#section8">Master of Science (ICT)(M.Sc−ARD)</a></li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>		
-</div>
+        </div>		
+    </div>
     <div class="footer">
         <div class="footer-content">
             <div class="row">
-                <div class="col-lg-3 col-lg-offset-2 col-md-4 col-sm-12 col-xs-12">
-                    <h4>About Placement Cell</h4>
-                    <p>The Placement Cell at DA-IICT is a concept in its own form. It works professionally abiding the hierarchy of the placement officer followed by the placement secretary, the faculty members and finally the student representatives from each stream. The hierarchy aims at touching all the aspects required for the smooth functioning of placement body of the reputed ICT forerunner Institution DA-IICT.</p>
-                </div>
-                <div class="col-lg-3 col-md-4 col-sm-12 col-xs-12">
-                    <h4>Contact Us</h4>
-                    <p>Dhirubhai Ambani Institute of Information and Communication Technology, Near Indroda Circle,<br>Gandhinagar (382 007),Gujarat (India)</p>
-                    <p><i class="material-icons" style="font-size:14px;">call</i> Mr. Sunil Jain:<span class="footer-contacts"> (M) +91 9328994143</span></p>
-                    <p><i class="material-icons" style="font-size:14px;">call</i> Dr. Ranendu Ghosh:<span class="footer-contacts">(O) +91 (79) 30510649 <br><span style="margin-left:125px;">(M) +91 9638851429</span></p>
-                    <p><span class="glyphicon glyphicon-envelope"></span> placement@daiict.ac.in</p>
-                </div>
-                <div class="col-lg-3 col-md-4 col-sm-12 col-xs-12">
-                    <h4>External Links</h4>
-                    <ul>
-                        <li><a href="#">Placement Brochure</a></li>
-                        <li><a href="#">Facebook</a></li>
-                    </ul>
+                    <div class="col-lg-3 col-lg-offset-2 col-md-4 col-sm-12 col-xs-12">
+                        <h4>About Placement Cell</h4>
+                        <p>The Placement Cell at DA-IICT is a concept in its own form. It works professionally abiding the hierarchy of the placement officer followed by the placement secretary, the faculty members and finally the student representatives from each stream. The hierarchy aims at touching all the aspects required for the smooth functioning of placement body of the reputed ICT forerunner Institution DA-IICT.</p>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-12 col-xs-12">
+                        <h4>Contact Us</h4>
+                        <p>Dhirubhai Ambani Institute of Information and Communication Technology, Near Indroda Circle,<br>Gandhinagar (382 007),Gujarat (India)</p>
+                        <p><i class="material-icons" style="font-size:14px;">call</i> Mr. Sunil Jain:<span class="footer-contacts"> (M) +91 9328994143</span></p>
+                        <p><i class="material-icons" style="font-size:14px;">call</i> Dr. Ranendu Ghosh:<span class="footer-contacts">(O) +91 (79) 30510649 <br><span style="margin-left:125px;">(M) +91 9638851429</span></p>
+                        <p><span class="glyphicon glyphicon-envelope"></span> placement@daiict.ac.in</p>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-12 col-xs-12">
+                        <h4>External Links</h4>
+                        <ul>
+                            <li><a href="#">Placement Brochure</a></li>
+                            <li><a href="#">Facebook</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-        </div>
         <div class="footer-links">
             <p>2016−17 © Placement Cell, DA-IICT.</p>
         </div>
@@ -280,7 +310,8 @@
 </body>
 
 	<!--   Core JS Files   -->
-	<script src="assets/js/jquery.min.js" type="text/javascript"></script>
+	<script src="assets/js/jquery.min.js" type="text/javascript">
+    </script>
 	<script src="assets/js/bootstrap.min.js" type="text/javascript"></script>
 	<script src="assets/js/material.min.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
@@ -293,7 +324,4 @@
 
 	<!-- Control Center for Material Kit: activating the ripples, parallax effects, scripts from the example pages etc -->
 	<script src="assets/js/material-kit.js" type="text/javascript"></script>
-    <!-- Side Bar-->
-    
-
 </html>
