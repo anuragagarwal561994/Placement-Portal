@@ -1,6 +1,7 @@
 .idea
 node_modules
-dist
+dist/public
 .tmp
 bower_components
 test/bower_components
+npm-debug.log
