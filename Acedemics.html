@@ -21,6 +21,10 @@
     <style>
 
         /* Content Style-sheets*/
+        html, body {
+            min-width: 420px;
+        }
+
         body {
             background-color: white;
         }
@@ -64,75 +68,164 @@
         }
 
         /* Header Style-Sheets*/
-
-        .top-header {
-            font-size: 1em;
-            color: #cccccc;
-            padding: 12px;
-            background-color: rgb(75, 87, 178);
+        /* Navbar styles */
+        .indigo-500 {
+            background-color: #3f51b5;
         }
 
-        .navbar-default {
-            color: #b4b4b4;
-            background-color: white;
-        }
-
-        ul.nav-head li {
-            border-bottom: solid;
-            border-bottom-color: white;
-            font-family: sans-serif;
-            padding-top: 20px;
-            padding-bottom: 20px;
-            color: #a5a5a5;
-        }
-
-        ul.nav-head li.active {
-            color: rgb(75, 87, 178);
-        }
-
-        ul.nav-head li:hover {
-            border-bottom: solid;
-            border-bottom-color: rgb(75, 87, 178);
-        }
-
-        .main-nav {
-            box-shadow: 2px 2px #cbcbcb;
-            margin-bottom: 2px;
-            padding: 0px;
-            background-color: white;
-        }
-
-        ul.nav-head {
-            margin-left: 100px;
-        }
-
-        ul.nav-head li.dropdown ul.dropdown-menu {
-            box-shadow: 1px 1px 1px;
-            background: white;
-        }
-
-        ul.nav-head li.dropdown ul.dropdown-menu li {
-            padding: 0px;
-        }
-
-        ul.nav-head li.dropdown ul.dropdown-menu li:hover {
-            background-color: #ebebeb;
-            border-bottom: none;
-        }
-
-        ul.nav-head li.dropdown ul.dropdown-menu li.menu-item a {
-            color: #535353;
+        .h-element {
+            padding: 11px 0;
             display: inline-block;
+            text-align: left;
+            vertical-align: middle;
+            max-width: 100%;
+            font-size: 14px;
+            line-height: 25px;
+            opacity: 0.6;
+            color: white;
         }
 
-        ul.nav-head li.dropdown ul.dropdown-menu li.menu-item a:hover {
-            background-color: #ebebeb;
-            border-bottom: none;
-            box-shadow: none;
+        .h-element .zmdi {
+            display: inline-block;
+            font: normal normal normal 16px/1 'Material Icons';
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            vertical-align: middle;
         }
 
-        #info {
-            font-size: 1.05em;
+        .h-element a {
+            color: inherit;
+        }
+
+        .navbar .navbar-nav > li > a {
+            font-weight: 300;
+            color: #949494;
+            border-radius: 0;
+            font-size: 14px;
+        }
+
+        .navbar .navbar-nav > .dropdown > a .material-icons {
+            font-size: 13px;
+            margin-right: 0;
+        }
+
+        .navbar .navbar-nav > .active > a {
+            color: #3f51b5;
+        }
+
+        .navbar {
+            position: relative;
+            z-index: 999;
+            box-shadow: 0 3px 5px rgba(0, 0, 0, .2);
+            -ms-box-shadow: 0 3px 5px rgba(0, 0, 0, .2);
+            -moz-box-shadow: 0 3px 5px rgba(0, 0, 0, .2);
+            -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, .2);
+            background-color: #fff;
+            padding: 0;
+            color: initial;
+        }
+
+        .navbar-header .navbar-brand {
+            padding: 20px 15px;
+        }
+
+        .navbar .divider-vertical {
+            height: 50px;
+            margin: 25px 9px;
+            border-right: 1px solid #ffffff;
+            border-left: 1px solid #f2f2f2;
+        }
+
+        .horizontal-divider {
+            border-bottom: 1px solid;
+            opacity: 0.08;
+        }
+
+        @media (max-width: 1200px) {
+            .navbar .container {
+                width: 100%;
+            }
+
+            .navbar-header .navbar-brand {
+                padding: 25px 15px;
+            }
+
+            .navbar-header .navbar-brand img {
+                height: 50px;
+            }
+
+            .navbar .navbar-nav > li > a {
+                padding-left: 8px;
+                padding-right: 8px;
+            }
+
+            .navbar .divider-vertical {
+                margin-top: 35px;
+                margin-bottom: 35px;
+                height: 30px;
+            }
+        }
+
+        @media (max-width: 991px) {
+            .navbar .navbar-nav > li > a {
+                padding-left: 5px;
+                padding-right: 5px;
+                font-size: 13px;
+            }
+
+            .navbar .divider-vertical {
+                margin-left: 5px;
+                margin-right: 5px;
+            }
+
+            .navbar .navbar-nav > .dropdown > a .material-icons {
+                font-size: 11px;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .navbar .navbar-nav > li > a {
+                padding-top: 40px;
+                padding-bottom: 40px;
+            }
+
+            .navbar .navbar-nav > li:hover > a {
+                border-bottom: 3px solid #3f51b5;
+                padding-bottom: 37px;
+            }
+
+            .navbar-header .navbar-brand {
+                height: 100px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .navbar .navbar-nav > li > a {
+                padding: 10px 15px;
+            }
+
+            .navbar-collapse.collapse {
+                border-top: 1px solid #eee;
+            }
+
+            .navbar-header .navbar-brand {
+                padding-top: 10px;
+                padding-bottom: 10px;
+                height: 70px;
+            }
+
+            .navbar-header .navbar-brand img {
+                height: 47px;
+            }
+
+            .navbar-toggle .material-icons {
+                line-height: 1.5;
+            }
+
+            .navbar-toggle {
+                margin-right: 0;
+                padding: 9px 10px;
+            }
         }
 
         /* Footer Style Sheets*/
@@ -176,67 +269,90 @@
 <body data-spy="scroll" data-target="#myScrollspy" data-offset="40">
 
     <!-- Navbar will come here -->
-    <div class="top-header hidden-xs hidden-sm">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-lg-3 col-lg-offset-1">
-                    <span style="margin-right:10px;"><i class="material-icons"
-                                                        style="font-size:14px;margin-right:10px;">call</i>+91 9328994143</span>
-                    <span style="margin-left:10px;margin-right:10px;">|</span>
-                    <span><i class="material-icons" style="font-size:14px;margin-right:10px;">mail</i>placement@daiict.ac.in</span>
-                </div>
-                <div class="col-lg-2 col-lg-offset-6">
-                    <span>Login / Sign Up</span>
-                </div>
-            </div>
-        </div>
-    </div>
-    <nav class="navbar navbar-light main-nav hidden-xs hidden-sm">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-lg-3">
-                    <div class="navbar-header">
-                        <img src="daiict.png" style="height:60px;margin-left:30px;margin-top:10px;">
+    <nav class="navbar" role="navigation">
+        <div class="indigo-500 hidden-xs">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="h-element">
+                            <i class="material-icons zmdi">call</i> &nbsp;&nbsp;&nbsp;(+91)&nbsp;&nbsp;9328994143 &nbsp;&nbsp;&nbsp;&nbsp;|
+                            &nbsp;&nbsp;&nbsp;&nbsp; <i class="material-icons zmdi">mail</i> &nbsp;&nbsp;placement@daiict.ac.in
+                        </div>
                     </div>
-                </div>
-                <div class="col-lg-9">
-                    <div class="container-fluid">
-                        <ul class="nav navbar-nav nav-head">
-                            <li class="active"><a href="#" id="info">Home</a></li>
-                            <li class="dropdown">
-                                <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="info">ACEDEMICS<span
-                                        class="caret"></span></a>
-                                <ul class="dropdown-menu">
-                                    <li class="menu-item"><a href="#">Academics @ DA-IICT</a></li>
-                                    <li class="menu-item"><a href="#">About ICT</a></li>
-                                    <li class="menu-item"><a href="#">(B.Tech) Honours with minor in Computational
-                                        Science</a></li>
-                                    <li class="menu-item"><a href="#">Master of Technology (M.Tech)</a></li>
-                                    <li class="menu-item"><a href="#">Master of Science − Information Technology
-                                        (M.Sc−IT)</a></li>
-                                    <li class="menu-item"><a href="#">M.Des</a></li>
-                                    <li class="menu-item"><a href="#">M.Sc−ARD</a></li>
-                                </ul>
-                            </li>
-                            <li class="dropdown">
-                                <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="info">WHY DAIICT?<span
-                                        class="caret"></span></a>
-                                <ul class="dropdown-menu">
-                                    <li class="menu-item"><a href="#">Why Recruit @ DA-IICT</a></li>
-                                    <li class="menu-item"><a href="#">Academics @ DA-IICT</a></li>
-                                    <li class="menu-item"><a href="#">DA-IICT Ranking</a></li>
-                                    <li class="menu-item"><a href="#">Demography</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="#" id="info">FOR COMPANIES</a></li>
-                            <li><a href="#" id="info">CONTACT US</a></li>
-                        </ul>
+                    <div class="col-sm-6">
+                        <div class="h-element pull-right">
+                            <a href="#">Login</a> / <a href="#">Sign Up</a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </nav>
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                        data-target="#da-navbar-collapse" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <i class="material-icons">menu</i>
+                </button>
+                <!-- TODO: set the home link -->
+                <a href="#" class="navbar-brand">
+                    <img alt="brand" src="daiict.png">
+                </a>
+                <div class="navbar-toggle visible-xs">
+                    <i class="material-icons">search</i>
+                </div>
+            </div>
 
+            <!-- Collect the nav links, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="da-navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="active hidden-sm"><a href="#">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Why DA-IICT<i class="material-icons">keyboard_arrow_down</i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">DA-IICT Academics</a></li>
+                            <li><a href="#">Demography</a></li>
+                            <li><a href="#">Research @ DA-IICT</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#">Past Placement Statistics</a></li>
+                            <li><a href="#">Past Recruiters</a></li>
+                            <li><a href="#">Student's Achievements</a></li>
+                            <li><a href="#">Software Culture @ DA-IICT</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Academics<i class="material-icons">keyboard_arrow_down</i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">About ICT</a></li>
+                            <li><a href="#">B. Tech. (ICT)</a></li>
+                            <li><a href="#">B. Tech. (Honours) with minor in Computational Science</a></li>
+                            <li><a href="#">M. Tech.</a></li>
+                            <li><a href="#">M. Sc. (IT)</a></li>
+                            <li><a href="#">M. Des</a></li>
+                            <li><a href="#">M. Sc (ICT) - ARD</a></li>
+                            <li><a href="#">Student Testimonials</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Contact Us<i class="material-icons">keyboard_arrow_down</i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Contact Placement Cell</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">Reach DA-IICT</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Policy</a></li>
+                    <li class="hidden-xs">
+                        <div class="divider-vertical"></div>
+                    </li>
+                    <li class="hidden-xs"><a href="#"><i class="material-icons">search</i></a></li>
+                    <li class="visible-xs horizontal-divider"></li>
+                    <li class="visible-xs"><a href="#">Login</a></li>
+                    <li class="visible-xs"><a href="#">Sign Up</a></li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container -->
+    </nav>
     <!-- end navbar -->
 
     <div class="wrapper">
